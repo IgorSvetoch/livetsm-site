@@ -1,0 +1,227 @@
+{
+  "specification": {
+    "name": "Aladdin LiveTSM website canonical specification",
+    "version": "1.8",
+    "updated": "2026-08-20",
+    "language": "ru",
+    "human_source": "SITE-SPEC.md",
+    "machine_source": "SITE-SPEC.json",
+    "baseline": "index.html",
+    "authority": "joint_source_of_truth",
+    "rules": [
+      "Read both canonical files before changing the website.",
+      "Update Markdown, JSON, and implementation in the same change.",
+      "If Markdown and JSON conflict, reconcile them before implementation.",
+      "HTML, CSS, JavaScript, deployments, archives, and old docs are not the source of truth.",
+      "Validate JSON and compare implementation with both specifications after every change."
+    ]
+  },
+  "product": {
+    "brand": "Aladdin",
+    "name": "LiveTSM",
+    "category": "Средство доверенной загрузки для x86-64-платформ с UEFI",
+    "primary_message": "Контроль загрузки до старта операционной системы",
+    "entry_stage": "UEFI BDS",
+    "trusted_entry": "Secure Boot Custom",
+    "hardware_information_interface": "USB 2.0",
+    "firmware_modification_required": false,
+    "platform_validation_required": true
+  },
+  "audiences": [
+    "специалисты ИБ и ИТ",
+    "архитекторы платформ и инфраструктуры",
+    "OEM и производители",
+    "владельцы серверов, сетевых устройств и appliance",
+    "руководители и маркетологи"
+  ],
+  "technical_boundary": {
+    "before_bds": ["SEC", "PEI", "DXE"],
+    "before_bds_owner": "платформа и базовая прошивка производителя",
+    "livetsm_controls_before_bds": false,
+    "checks_after_bds": ["самотестирование", "идентификация и аутентификация при наличии", "аппаратная платформа", "целостность загрузочных и назначенных объектов", "политика", "аудит"],
+    "outputs": ["разрешить загрузку", "заблокировать загрузку"],
+    "decision_objects": ["пользователь", "аппаратная платформа", "загрузочные объекты", "политика", "аудит"]
+  },
+  "boot_modes": [
+    {
+      "id": "compatibility",
+      "title": "Максимальная совместимость",
+      "chain": ["LiveTSM", "штатный загрузчик ОС", "ОС"],
+      "purpose": "Минимум изменений в эксплуатации Windows и Linux"
+    },
+    {
+      "id": "direct_linux",
+      "title": "Прямая загрузка Linux",
+      "excluded": ["штатный загрузчик ОС", "GRUB как пример"],
+      "alternative_chains": [
+        ["LiveTSM", "ядро + параметры ядра + initramfs", "Linux"],
+        ["LiveTSM", "UKI", "Linux"]
+      ],
+      "uki_contains": ["ядро", "параметры ядра", "initramfs"],
+      "prohibited": "UKI после отдельных ядра и initramfs в последовательной цепочке"
+    }
+  ],
+  "execution_selection": {
+    "independent_dimensions": ["scenario", "operating_interface", "form_factor"],
+    "fixed_mapping_allowed": false,
+    "interface_section": {
+      "title": "Два интерфейса эксплуатации",
+      "selection_rule": "Интерфейс выбирается по условиям работы и не привязан автоматически к модели или форм-фактору.",
+      "priority": "critical",
+      "competitive_differentiator": true,
+      "owner_approval_required_to_remove_or_weaken": true
+    },
+    "scenarios": [
+      {"model": "TSMX-T110", "use": "оборудование без локального пользователя", "traits": ["автозагрузка", "автоматический предзагрузочный контроль"]},
+      {"model": "TSMX-E110", "use": "стационарные рабочие места", "traits": ["пользовательский сценарий", "идентификация до ОС"]},
+      {"model": "TSMX-C110", "use": "ноутбуки и мобильные рабочие места", "traits": ["пользовательский сценарий", "мобильность"]}
+    ],
+    "interfaces": [
+      {
+        "id": "CLI",
+        "name": "Консольный режим — без VGA",
+        "site_copy": "Полноценная настройка и администрирование через командную строку. Подходит для серверов, сетевых устройств и appliance без видеовыхода.",
+        "full_featured": true,
+        "requires_vga": false,
+        "requires_gui": false,
+        "capabilities": ["настройка", "администрирование", "эксплуатация"],
+        "targets": ["серверы", "сетевые устройства", "межсетевые экраны", "appliance без видеовыхода"],
+        "positioning": "одно из важнейших конкурентных преимуществ LiveTSM"
+      },
+      {"id": "GUI", "name": "Графический режим", "site_copy": "Визуальная оболочка для привычной работы на настольных системах и ноутбуках с экраном.", "full_featured": true, "targets": ["настольные системы", "ноутбуки с экраном"]}
+    ],
+    "form_factors": [
+      {"id": "usb_type_a", "name": "USB Type-A", "placement": "внешнее", "interface": "USB 2.0"},
+      {"id": "m2_2230_ae", "name": "M.2 2230 A+E", "placement": "внутреннее", "interface": "USB 2.0", "not_interface": "PCIe", "socket": "M.2 Socket 1 Key E"}
+    ]
+  },
+  "threats_and_responses": [
+    "альтернативная ОС, внешний носитель, второй диск или другая Boot Entry",
+    "подмена загрузчика, ядра, initramfs, UKI или назначенного объекта",
+    "обход ещё не запущенной защиты ОС",
+    "недоверенный EFI-компонент блокируется при корректной базе Secure Boot",
+    "Boot Entry не делает компонент доверенным",
+    "отключение LiveTSM убирает доверенную точку входа",
+    "несоответствие эталону вызывает заданную политикой реакцию"
+  ],
+  "compliance": {
+    "role": "технический компонент системы защиты",
+    "system_assessed_as_whole": true,
+    "certificate_issued": false,
+    "mandatory_warning": "Сертификат на LiveTSM пока не получен; решение о проведении сертификации не является сертификатом соответствия.",
+    "decision": {"authority": "ФСТЭК России", "number": "7553", "date": "2025-11-18", "subject": "Aladdin LiveTSM"},
+    "plan": {"trust_level": 4, "profile": "ИТ.СДЗ.ПР4.ПЗ", "scheme": "серийное производство"},
+    "intended_levels": ["ГИС 1 класса", "АСУ ТП 1 класса", "ИСПДн 1 уровня", "ЗОКИИ 1 категории"],
+    "regulatory_context": ["Приказ ФСТЭК №117", "Приказ ФСТЭК №239", "Приказ ФСТЭК №31", "Приказ ФСТЭК №44"],
+    "requires_revalidation_before_official_publication": true,
+    "unrelated_certificates_prohibited": true
+  },
+  "applications": ["рабочие станции и ноутбуки", "серверы и ЦОД", "межсетевые экраны и appliance", "банкоматы и терминалы"],
+  "commercial_audiences": ["OEM / производители", "ИТ / ИБ организации"],
+  "compatibility": {
+    "universal_pc_claim_allowed": false,
+    "operating_systems": ["Windows 10", "Windows 11", "Astra Linux 1.8", "РЕД ОС 8", "Альт 8 СП", "РОСА «Хром»"],
+    "os_list_requires_final_validation": true,
+    "checks": ["x86-64", "UEFI", "Secure Boot Custom", "пользовательские ключи", "USB-загрузка в EFI-режиме", "Legacy/CSM отключён", "GPT", "ESP", "пароль UEFI Setup", "USB или M.2 Socket 1 Key E с USB 2.0"]
+  },
+  "pilot": {
+    "steps": ["платформа и ОС", "модель, режим, интерфейс и форм-фактор", "Secure Boot, политика и аудит", "штатные и обходные проверки", "результат и условия внедрения"],
+    "criteria": ["PASS", "FAIL"]
+  },
+  "request_form": {
+    "fields": ["организация", "имя", "рабочая почта", "телефон", "платформа", "ОС", "задача", "согласие"],
+    "demo_only": true,
+    "sends_data": false,
+    "production_requirements": ["LEAD_ROUTE", "PRIVACY"]
+  },
+  "documentation": {
+    "items": [
+      {"role": "администратор", "interface": "CLI", "pages": 81},
+      {"role": "администратор", "interface": "GUI", "pages": 64},
+      {"role": "пользователь", "interface": "CLI", "pages": 20},
+      {"role": "пользователь", "interface": "GUI", "pages": 22}
+    ],
+    "local_bundle": {"pdf_included": true, "fstec_decision_included": true},
+    "public_demo": {"pdf_included": false, "fstec_decision_included": false, "display_text": "Предоставляется по запросу"},
+    "access_change_requires_owner_decision": true,
+    "marketing_materials": {
+      "directory": "docs/marketing",
+      "human_source": "docs/marketing/MARKETING-DESIGN-SPEC.md",
+      "machine_source": "docs/marketing/MARKETING-DESIGN-SPEC.json",
+      "authority": "mandatory_extension_of_site_specification",
+      "stage": "figma_editable_vector_review",
+      "art_direction_name": "Approved reference layout",
+      "art_direction_approved": true,
+      "art_direction_approved_on": "2026-08-20",
+      "art_direction_approval_required_before_rerender": false,
+      "existing_pngs_are_approved_visual_reference": true,
+      "new_pngs_rendered": true,
+      "new_png_render_allowed_at_current_stage": true,
+      "owner_png_approval_required_before_print_assets": true,
+      "whiteboard_style_rejected": true,
+      "hardware_imagery_allowed_if_technically_validated": true,
+      "source_format": "SVG",
+      "primary_output_format": "self-contained SVG",
+      "preview_format": "PNG control preview",
+      "public_cta_url": "https://aladdin-livetsm-demo.igorsvetoch.chatgpt.site",
+      "printed_url_required_next_to_qr": true,
+      "qr_must_be_machine_decodable": true,
+      "public_site_changed_for_preview_stage": false,
+      "docx_allowed_at_current_stage": false,
+      "pdf_allowed_at_current_stage": false,
+      "external_publication_requires_owner_decision": true,
+      "previews": [
+        {"id": "technical_leaflet", "viewbox": "0 0 1024 1536", "primary": "editable SVG", "control_preview": "2048 × 3072 PNG", "figma_editable_text": true, "foreign_objects": 0, "embedded_raster_images": 3}
+      ],
+      "booklet_status": "not_started_until_leaflet_approval"
+    }
+  },
+  "information_architecture": [
+    "header_navigation", "hero", "os_protection_problem", "bds_boundary", "verification_process", "decision_objects", "boot_modes", "threat_responses", "models_form_factors_interfaces", "compliance", "audiences_and_applications", "compatibility", "pilot", "documentation", "faq", "technical_precheck", "footer"
+  ],
+  "navigation": {
+    "links": ["Как работает", "Режимы", "Модели", "Соответствие", "Применение", "Совместимость", "Документация"],
+    "primary_cta": "Запросить пилот"
+  },
+  "faq_topics": ["модификация прошивки", "другая Boot Entry", "отключение LiveTSM", "различия T110/E110/C110", "работа без локального пользователя"],
+  "visual_rules": {
+    "diagram_preference": "HTML/CSS",
+    "generated_marketing_imagery_preferred": false,
+    "diagram_text": ["крупный", "краткий", "технически точный", "не пересекает границы"],
+    "palette": ["dark navy", "white", "light surfaces", "cyan", "blue", "orange CTA"],
+    "horizontal_overflow_allowed": false
+  },
+  "responsive": {
+    "desktop": {"horizontal_navigation": true, "hamburger": false, "mobile_menu_default_visible": false},
+    "mobile_breakpoint_max_px": 940,
+    "mobile": {"horizontal_navigation": false, "hamburger": true, "vertical_menu_opens_on_click": true},
+    "return_to_desktop_closes_mobile_menu": true,
+    "escape_closes_mobile_menu": true,
+    "reduced_motion_supported": true
+  },
+  "accessibility": {
+    "semantic_landmarks": true,
+    "skip_link": true,
+    "menu_aria": ["aria-expanded", "aria-controls", "hidden"],
+    "tabs": {"roles": ["tablist", "tab", "tabpanel"], "keys": ["ArrowLeft", "ArrowRight", "Home", "End"]},
+    "native_details_summary": true,
+    "diagram_aria_labels": true
+  },
+  "deployments": {
+    "canonical_local": "livetsm-site-final-v3.7",
+    "public_demo_url": "https://aladdin-livetsm-demo.igorsvetoch.chatgpt.site",
+    "public_demo_pdf_policy": "exclude"
+  },
+  "change_control": [
+    "read both canonical specifications",
+    "update Markdown and JSON together",
+    "update implementation",
+    "validate compliance status",
+    "validate independent scenario/interface/form-factor dimensions",
+    "preserve CLI no-VGA proposition",
+    "parse JSON",
+    "compare index.html with specifications",
+    "test desktop and mobile proportionally to risk",
+    "verify PDF policy before deployment"
+  ]
+}

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Aladdin LiveTSM — средство доверенной загрузки для x86-64-платформ с UEFI. Контроль разрешённого сценария запуска до старта операционной системы.">
+  <title>Aladdin LiveTSM — доверенная загрузка до старта ОС</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Aladdin LiveTSM — на главную">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span class="brand__name"><small>Aladdin</small><strong>LiveTSM</strong></span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#architecture">Как работает</a>
+        <a href="#modes">Режимы</a>
+        <a href="#models">Модели</a>
+        <a href="#compliance">Соответствие</a>
+        <a href="#applications">Применение</a>
+        <a href="#compatibility">Совместимость</a>
+        <a href="#documentation">Документация</a>
+      </nav>
+      <div class="header__actions">
+        <a class="button button--primary button--small desktop-action" href="#pilot">Запросить пилот</a>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span><span class="sr-only">Открыть меню</span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню" hidden>
+      <a href="#architecture">Как работает</a>
+      <a href="#modes">Режимы</a>
+      <a href="#models">Модели</a>
+      <a href="#compliance">Соответствие</a>
+      <a href="#applications">Применение</a>
+      <a href="#compatibility">Совместимость</a>
+      <a href="#documentation">Документация</a>
+      <a class="button button--primary" href="#pilot">Запросить пилот</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero dark-section">
+      <div class="hero__glow hero__glow--left" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--right" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Средство доверенной загрузки для x86-64 и UEFI</p>
+          <h1>Контроль загрузки <span>до старта операционной системы</span></h1>
+          <p class="hero__lead">Aladdin LiveTSM включается в загрузочную цепочку на этапе UEFI BDS, выполняет предусмотренные предзагрузочные проверки и только после этого разрешает или блокирует запуск штатной ОС.</p>
+          <div class="hero__benefits" aria-label="Ключевые преимущества">
+            <div><strong>Без модификации прошивки</strong><span>использует штатные механизмы UEFI</span></div>
+            <div><strong>Два режима загрузки</strong><span>совместимость или прямой запуск Linux</span></div>
+            <div><strong>Два форм-фактора</strong><span>USB Type-A и M.2 2230 A+E</span></div>
+          </div>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#pilot">Запросить пилот</a>
+            <a class="button button--secondary" href="#architecture">Как это работает</a>
+          </div>
+          <p class="microcopy">Совместимость подтверждается на конкретной аппаратной платформе до масштабного внедрения.</p>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="web-diagram web-diagram--gateway" role="img" aria-label="Платформа передаёт управление LiveTSM на этапе BDS; после проверок загрузка разрешается или блокируется.">
+            <div class="diagram-title">Шлюз доверенной загрузки</div>
+            <div class="diagram-flow"><span>Платформа<br><small>SEC / PEI / DXE</small></span><b>→ <em>BDS</em> →</b><span class="diagram-focus">LiveTSM<br><small>проверки</small></span><b>→</b><span class="diagram-result"><i>ОС</i><i>Блокировка</i></span></div>
+            <div class="diagram-note">Контроль LiveTSM начинается после передачи управления на этапе BDS</div>
+          </div>
+        </div>
+      </div>
+      <div class="container fact-strip reveal" aria-label="Ключевые факты о продукте">
+        <div><strong>BDS</strong><span>точка начала действия</span></div>
+        <div><strong>Secure Boot Custom</strong><span>доверенный вход в LiveTSM</span></div>
+        <div><strong>USB 2.0</strong><span>интерфейс всех аппаратных исполнений</span></div>
+        <div><strong>2 режима</strong><span>штатный загрузчик или прямой Linux</span></div>
+      </div>
+    </section>
+
+    <section class="section intro-section">
+      <div class="container intro-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow eyebrow--dark">Почему нужен отдельный предзагрузочный уровень</p>
+          <h2>Защита внутри ОС начинается слишком поздно, чтобы контролировать сам факт её запуска</h2>
+          <p>Антивирус, EDR, контроль приложений и другие механизмы работают после старта операционной системы. LiveTSM решает другую задачу: контролирует, какая среда вообще получит управление.</p>
+        </div>
+        <div class="risk-stack reveal">
+          <article><span>01</span><div><h3>Альтернативная ОС</h3><p>Внешний носитель, второй диск или другая Boot Entry создают иной путь запуска.</p></div></article>
+          <article><span>02</span><div><h3>Изменённые компоненты</h3><p>Подмена загрузчика, ядра, initramfs, UKI или контролируемого объекта меняет разрешённую конфигурацию.</p></div></article>
+          <article><span>03</span><div><h3>Обход защиты штатной ОС</h3><p>Нештатная среда может попытаться обойти механизмы доступа, которые ещё не запущены.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="architecture">
+      <div class="container section-heading section-heading--center reveal">
+        <p class="eyebrow eyebrow--dark">Граница ответственности</p>
+        <h2>LiveTSM начинает действовать на этапе BDS</h2>
+        <p>До BDS доверенная инициализация относится к аппаратной платформе и базовой прошивке производителя. На BDS штатный Secure Boot проверяет доверенный компонент LiveTSM и передаёт ему управление.</p>
+      </div>
+      <div class="container architecture-card reveal">
+        <div class="architecture-card__text">
+          <div class="phase phase--platform">
+            <span class="phase__eyebrow">До BDS</span>
+            <div class="phase__chips"><span>SEC</span><span>PEI</span><span>DXE</span></div>
+            <h3>Доверенная основа платформы</h3>
+            <p>Инициализация процессора, памяти, устройств и базовых сервисов UEFI выполняется до запуска LiveTSM.</p>
+          </div>
+          <div class="bds-line">
+            <span></span>
+            <div><strong>BDS</strong><small>UEFI Secure Boot Custom → LiveTSM</small></div>
+            <span></span>
+          </div>
+          <div class="phase phase--product">
+            <span class="phase__eyebrow">После BDS</span>
+            <div class="phase__chips phase__chips--active"><span>самотест</span><span>ИА</span><span>платформа</span><span>целостность</span><span>аудит</span></div>
+            <h3>Зона действия LiveTSM</h3>
+            <p>Продукт выполняет предусмотренные проверки и принимает решение о продолжении или блокировании штатной загрузки.</p>
+          </div>
+          <div class="notice"><strong>Граница продукта:</strong> LiveTSM не контролирует SEC, PEI и DXE и не заменяет механизмы доверия базовой платформы.</div>
+        </div>
+        <div class="web-diagram web-diagram--chain" role="img" aria-label="Цепочка доверенной загрузки: платформа, UEFI, Secure Boot Custom, BDS, LiveTSM, проверки и решение.">
+          <div class="diagram-title">Цепочка доверенной загрузки</div>
+          <div class="chain-flow"><span>Платформа<small>аппаратная основа</small></span><b>→</b><span>UEFI<small>SEC / PEI / DXE</small></span><b>→</b><span>Secure Boot<small>проверка LiveTSM</small></span><b>→</b><span class="diagram-focus">BDS<small>запуск LiveTSM</small></span><b>→</b><span>Проверки<small>идентификация и целостность</small></span></div>
+          <div class="diagram-note">LiveTSM не контролирует SEC, PEI и DXE</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container process-grid">
+        <div class="process-copy reveal">
+          <p class="eyebrow eyebrow--dark">Логика работы</p>
+          <h2>Сначала проверить — затем запускать</h2>
+          <p class="lead">LiveTSM формирует решение не по одному признаку. Перед handoff к ОС продукт последовательно проверяет собственное состояние, пользователя, платформу и заданные объекты.</p>
+          <ol class="process-list">
+            <li><span>01</span><div><strong>Доверенный запуск</strong><p>Secure Boot проверяет компонент LiveTSM.</p></div></li>
+            <li><span>02</span><div><strong>Самотестирование</strong><p>Проверяется готовность функций безопасности.</p></div></li>
+            <li><span>03</span><div><strong>Пользователь и платформа</strong><p>Выполняется ИА и проверка аппаратного профиля.</p></div></li>
+            <li><span>04</span><div><strong>Объекты загрузки</strong><p>Контролируются назначенные политикой компоненты.</p></div></li>
+            <li><span>05</span><div><strong>Решение</strong><p>Загрузка разрешается либо блокируется с регистрацией события.</p></div></li>
+          </ol>
+        </div>
+        <div class="web-diagram web-diagram--checks reveal" role="img" aria-label="LiveTSM проверяет пользователя, устройство, компоненты загрузки и политику до запуска операционной системы.">
+          <div class="diagram-title">Объекты проверки LiveTSM</div>
+          <div class="check-grid"><span>Пользователь</span><span>Устройство</span><span>Компоненты загрузки</span><span>Политика загрузки</span></div>
+          <div class="decision-row"><i>Целостность подтверждена</i><i>Нарушение обнаружено</i></div>
+          <div class="diagram-note">Сначала проверить — затем запускать</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section capability-section">
+      <div class="container section-heading section-heading--center reveal">
+        <p class="eyebrow">Что находится под контролем</p>
+        <h2>Пять объектов решения о загрузке</h2>
+      </div>
+      <div class="container capability-grid">
+        <article class="capability-card reveal"><span>ID</span><h3>Пользователь</h3><p>Идентификатор, пароль, усиленная аутентификация по паролю и аппаратному токену, ограничения неуспешных попыток.</p></article>
+        <article class="capability-card reveal"><span>HW</span><h3>Аппаратная платформа</h3><p>Сопоставление текущего состава контролируемых компонентов с зафиксированным аппаратным профилем.</p></article>
+        <article class="capability-card reveal"><span>OS</span><h3>Загрузочные объекты</h3><p>Штатный загрузчик, ядро Linux, initramfs, UKI, параметры загрузки и назначенные файлы или папки.</p></article>
+        <article class="capability-card reveal"><span>PL</span><h3>Политика</h3><p>Администратор определяет поддерживаемые режимы, параметры, ограничения и состав объектов контроля.</p></article>
+        <article class="capability-card reveal"><span>AU</span><h3>Аудит</h3><p>Результаты проверок, действия пользователей и изменения параметров регистрируются до запуска ОС.</p></article>
+      </div>
+    </section>
+
+    <section class="section modes-section" id="modes">
+      <div class="container section-heading section-heading--center reveal">
+        <p class="eyebrow eyebrow--dark">Два режима запуска ОС</p>
+        <h2>Баланс между привычной эксплуатацией и сокращённой доверенной цепочкой</h2>
+        <p>Оба режима начинаются с проверок LiveTSM. Различается только то, кому продукт передаёт управление после положительного решения.</p>
+      </div>
+      <div class="container mode-shell reveal">
+        <div class="mode-tabs" role="tablist" aria-label="Режимы загрузки">
+          <button class="mode-tab is-active" id="tabCompat" type="button" role="tab" aria-selected="true" aria-controls="panelCompat">Максимальная совместимость</button>
+          <button class="mode-tab" id="tabDirect" type="button" role="tab" aria-selected="false" aria-controls="panelDirect">Прямая загрузка Linux</button>
+        </div>
+        <div class="mode-panel is-active" id="panelCompat" role="tabpanel" aria-labelledby="tabCompat">
+          <div class="mode-panel__copy">
+            <p class="mode-kicker">LiveTSM → штатный загрузчик → ОС</p>
+            <h3>Минимум изменений в штатной эксплуатации</h3>
+            <p>LiveTSM проверяет штатный загрузчик и передаёт ему управление. Сохраняются привычные процедуры установки, обновления и восстановления ОС.</p>
+            <div class="mode-points">
+              <div><strong>Плюс</strong><span>совместимость с существующей эксплуатационной схемой</span></div>
+              <div><strong>Условие</strong><span>конфигурация штатного загрузчика остаётся частью доверенной цепочки</span></div>
+            </div>
+            <div class="tag-row"><span>Windows</span><span>рабочие станции</span><span>минимум изменений</span></div>
+          </div>
+          <div class="web-diagram web-diagram--allowed" role="img" aria-label="Разрешённый путь: Secure Boot Custom, BDS, LiveTSM, штатный загрузчик и операционная система.">
+            <div class="diagram-title">Штатная цепочка</div>
+            <div class="simple-flow"><span>Secure Boot</span><b>→</b><span>BDS</span><b>→</b><span>LiveTSM</span><b>→</b><span>Загрузчик ОС</span><b>→</b><span>ОС</span></div>
+            <div class="diagram-note">Штатный загрузчик остаётся контролируемым объектом</div>
+          </div>
+        </div>
+        <div class="mode-panel" id="panelDirect" role="tabpanel" aria-labelledby="tabDirect" hidden>
+          <div class="mode-panel__copy">
+            <p class="mode-kicker">LiveTSM → ядро + параметры ядра + initramfs → Linux<br>или LiveTSM → UKI → Linux</p>
+            <h3>Сокращённая доверенная цепочка Linux</h3>
+            <p>LiveTSM исключает штатный загрузчик ОС, например GRUB, и непосредственно запускает либо набор «ядро + параметры ядра + initramfs», либо единый UKI. UKI уже включает ядро, параметры ядра и initramfs.</p>
+            <div class="mode-points">
+              <div><strong>Плюс</strong><span>более однозначная и воспроизводимая загрузочная конфигурация</span></div>
+              <div><strong>Условие</strong><span>при легитимном обновлении контролируемых объектов обновляются эталоны LiveTSM</span></div>
+            </div>
+            <div class="tag-row"><span>Linux</span><span>серверы</span><span>appliance</span><span>UKI</span></div>
+          </div>
+          <div class="direct-visual" aria-label="Два варианта прямой загрузки Linux без GRUB">
+            <div class="direct-branch"><strong>Вариант 1</strong><div class="direct-flow"><span>LiveTSM</span><b>→</b><span>ядро + параметры ядра + initramfs</span><b>→</b><span>Linux</span></div></div>
+            <div class="direct-branch"><strong>Вариант 2</strong><div class="direct-flow"><span>LiveTSM</span><b>→</b><span>UKI<small>ядро + параметры + initramfs</small></span><b>→</b><span>Linux</span></div></div>
+            <div class="direct-note"><strong>GRUB / штатный загрузчик ОС исключён</strong><span>LiveTSM передаёт управление непосредственно загрузочным объектам Linux</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft threat-section">
+      <div class="container section-heading reveal">
+        <p class="eyebrow eyebrow--dark">Не обещание, а проверяемая логика</p>
+        <h2>Что происходит при попытке изменить путь загрузки</h2>
+      </div>
+      <div class="container threat-list">
+        <article class="threat-item reveal"><span class="threat-item__num">01</span><div><strong>Загрузка с внешнего носителя</strong><p>Secure Boot проверяет EFI-компонент. При целевой базе доверия недоверенный загрузчик не получает управления.</p></div><small>Условие: Secure Boot включён и UEFI Setup защищён.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">02</span><div><strong>Другая Boot Entry</strong><p>Приоритет загрузочной записи сам по себе не делает компонент доверенным: подпись всё равно проверяется Secure Boot.</p></div><small>Условие: сторонний ключ отсутствует в базе доверия.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">03</span><div><strong>Физическое отключение LiveTSM</strong><p>В целевой конфигурации исчезает доверенная точка входа, поэтому защищённая штатная загрузка становится недоступной.</p></div><small>Восстановление выполняет уполномоченный администратор.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">04</span><div><strong>Изменение контролируемого объекта</strong><p>LiveTSM обнаруживает несоответствие эталону и применяет предусмотренную политикой защитную реакцию.</p></div><small>Условие: объект включён в политику контроля.</small></article>
+      </div>
+    </section>
+
+    <section class="section models-section" id="models">
+      <div class="container section-heading reveal">
+        <p class="eyebrow eyebrow--dark">Линейка LiveTSM</p>
+        <h2>Сначала сценарий — затем форм-фактор</h2>
+        <p>Все исполнения реализуют одинаковый состав функций безопасности. Выбор начинается с режима эксплуатации и способа установки.</p>
+      </div>
+      <div class="container model-grid">
+        <article class="model-card reveal">
+          <div class="scenario-visual"><span>01</span><strong>Автономное оборудование</strong><small>без локального пользователя</small></div>
+          <div class="model-card__copy"><span class="model-name">TSMX-T110</span><h3>Для оборудования без локального пользователя</h3><p>Автоматическая загрузка после успешных проверок.</p><div class="tag-row"><span>автозагрузка</span><span>без локального пользователя</span></div></div>
+          <details><summary>Особенности сценария</summary><ul><li>Автоматический предзагрузочный контроль</li><li>Эксплуатация без действий локального пользователя</li></ul></details>
+        </article>
+        <article class="model-card reveal">
+          <div class="scenario-visual"><span>02</span><strong>Рабочее место</strong><small>пользовательский сценарий</small></div>
+          <div class="model-card__copy"><span class="model-name">TSMX-E110</span><h3>Для стационарных рабочих мест</h3><p>Пользовательский предзагрузочный сценарий.</p><div class="tag-row"><span>пользователь</span><span>стационарное рабочее место</span></div></div>
+          <details><summary>Особенности сценария</summary><ul><li>Идентификация пользователя до запуска ОС</li><li>Применение политики доверенной загрузки</li></ul></details>
+        </article>
+        <article class="model-card reveal">
+          <div class="scenario-visual"><span>03</span><strong>Мобильное рабочее место</strong><small>внешнее подключение</small></div>
+          <div class="model-card__copy"><span class="model-name">TSMX-C110</span><h3>Для ноутбуков и мобильных рабочих мест</h3><p>Пользовательский сценарий для оборудования, где важна мобильность.</p><div class="tag-row"><span>пользователь</span><span>мобильное рабочее место</span></div></div>
+          <details><summary>Особенности сценария</summary><ul><li>Предзагрузочная идентификация пользователя</li><li>Сценарий применения с мобильным оборудованием</li></ul></details>
+        </article>
+      </div>
+      <div class="container form-factors reveal" aria-label="Форм-факторы LiveTSM">
+        <div class="form-factor-heading"><strong>Форм-факторы LiveTSM</strong><span>Форм-фактор и маркетинговый сценарий — разные характеристики исполнения.</span></div>
+        <article><span>USB Type-A</span><strong>Внешнее исполнение</strong><small>Подключение без внутренней установки устройства.</small></article>
+        <article><span>M.2 2230 A+E</span><strong>Внутреннее исполнение</strong><small>Конструктивный формат; информационный интерфейс — USB 2.0, не PCIe.</small></article>
+      </div>
+      <div class="container interface-modes reveal" aria-label="Интерфейсы LiveTSM">
+        <div class="interface-heading"><strong>Два интерфейса эксплуатации</strong><span>Интерфейс выбирается по условиям работы и не привязан автоматически к модели или форм-фактору.</span></div>
+        <article><span>CLI</span><strong>Консольный режим — без VGA</strong><p>Полноценная настройка и администрирование через командную строку. Подходит для серверов, сетевых устройств и appliance без видеовыхода.</p></article>
+        <article><span>GUI</span><strong>Графический режим</strong><p>Визуальная оболочка для привычной работы на настольных системах и ноутбуках с экраном.</p></article>
+      </div>
+    </section>
+
+    <section class="section compliance-section" id="compliance">
+      <div class="container section-heading reveal">
+        <p class="eyebrow eyebrow--dark">Нормативное соответствие</p>
+        <h2>LiveTSM помогает реализовать меры защиты до запуска операционной системы</h2>
+        <p>Средство доверенной загрузки применяется как технический компонент системы защиты. Конкретный набор мер и применимость продукта определяются категорией или классом защищённости, моделью угроз и проектными решениями.</p>
+      </div>
+      <div class="container compliance-grid">
+        <article class="compliance-card compliance-card--decision reveal">
+          <span class="compliance-kicker">Статус сертификации</span>
+          <h3>Принято решение о проведении сертификации</h3>
+          <p>Решение ФСТЭК России №7553 от 18 ноября 2025 года относится к средству доверенной загрузки Aladdin LiveTSM.</p>
+          <ul>
+            <li>сертификация проводится по 4 уровню доверия;</li>
+            <li>учитываются требования к средствам доверенной загрузки;</li>
+            <li>профиль защиты — ИТ.СДЗ.ПР4.ПЗ;</li>
+            <li>схема сертификации — серийное производство.</li>
+          </ul>
+          <p class="status-warning"><strong>Важно:</strong> сертификат на LiveTSM пока не получен. Решение о проведении сертификации не является сертификатом соответствия.</p>
+          <a class="compliance-link" href="docs/Решение-ФСТЭК-7553-18.11.2025.pdf" target="_blank" rel="noopener">Открыть решение ФСТЭК №7553</a>
+        </article>
+        <article class="compliance-card reveal">
+          <span class="compliance-kicker">Назначение по решению №7553</span>
+          <h3>Системы с высокими требованиями к защищённости</h3>
+          <div class="compliance-scope">
+            <div><strong>ГИС</strong><span>1 класс защищённости</span></div>
+            <div><strong>АСУ ТП</strong><span>1 класс защищённости</span></div>
+            <div><strong>ИСПДн</strong><span>1 уровень защищённости</span></div>
+            <div><strong>ЗОКИИ</strong><span>1 категория значимости</span></div>
+          </div>
+          <p class="compliance-footnote">Это назначение зафиксировано в решении о проведении сертификации и не означает, что сертификат уже выдан.</p>
+        </article>
+      </div>
+      <div class="container regulatory-grid reveal">
+        <div class="regulatory-intro"><strong>Нормативные задачи заказчика</strong><span>Функции LiveTSM могут использоваться при реализации предусмотренных мер защиты. Соответствие информационной системы оценивается в целом, а не по факту установки одного продукта.</span></div>
+        <article><strong>Приказ ФСТЭК №117</strong><span>Государственные информационные системы</span></article>
+        <article><strong>Приказ ФСТЭК №239</strong><span>Значимые объекты критической информационной инфраструктуры</span></article>
+        <article><strong>Приказ ФСТЭК №31</strong><span>Автоматизированные системы управления производственными и технологическими процессами</span></article>
+        <article><strong>Приказ ФСТЭК №44</strong><span>Многофункциональные межсетевые экраны</span></article>
+      </div>
+    </section>
+
+    <section class="section dark-section audience-section" id="applications">
+      <div class="container audience-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Два рынка — одна техническая основа</p>
+          <h2>LiveTSM можно встроить в новую платформу или использовать для дооснащения существующего парка</h2>
+        </div>
+        <div class="audience-cards">
+          <article class="audience-card reveal"><span>OEM / производители</span><h3>Дополнить платформу доверенной загрузкой без изменения базовой прошивки</h3><ul><li>подбор исполнения под конструктив платформы;</li><li>безоператорные сценарии;</li><li>меньше изменений в платформе;</li><li>пилот на целевом оборудовании.</li></ul></article>
+          <article class="audience-card reveal"><span>ИТ / ИБ организации</span><h3>Дооснастить существующие рабочие места, серверы и специализированные системы</h3><ul><li>контроль до старта ОС;</li><li>режим совместимости для штатной эксплуатации;</li><li>прямой Linux для сокращённой цепочки;</li><li>пилот на типовой конфигурации.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section applications-section">
+      <div class="container section-heading reveal"><p class="eyebrow eyebrow--dark">Сценарии применения</p><h2>От рабочих мест до специализированных платформ</h2></div>
+      <div class="container application-grid">
+        <article class="application-card reveal"><span>01</span><h3>Рабочие станции и ноутбуки</h3><p>Предзагрузочная аутентификация, контроль загрузчика и назначенных объектов, блокирование альтернативного старта.</p></article>
+        <article class="application-card reveal"><span>02</span><h3>Серверы и ЦОД</h3><p>Контроль загрузочной конфигурации, прямой запуск Linux или UKI, воспроизводимый сценарий старта.</p></article>
+        <article class="application-card reveal"><span>03</span><h3>Межсетевые экраны и appliance</h3><p>Встраиваемое исполнение, автоматическая загрузка и отсутствие модификации базовой прошивки.</p></article>
+        <article class="application-card reveal"><span>04</span><h3>Банкоматы и терминалы</h3><p>Блокирование нештатной ОС, контроль загрузочной конфигурации и аудит до запуска прикладной среды.</p></article>
+      </div>
+    </section>
+
+    <section class="section compatibility-section" id="compatibility">
+      <div class="container compatibility-shell">
+        <div class="section-heading reveal"><p class="eyebrow">Совместимость</p><h2>Требования к платформе известны заранее</h2><p>LiveTSM не позиционируется как устройство «для любого ПК». Совместимость определяется реализацией UEFI, поддержкой Secure Boot Custom и способом подключения.</p></div>
+        <div class="compatibility-grid">
+          <article class="compat-card reveal"><h3>Операционные системы</h3><div class="os-columns"><div><strong>Windows</strong><span>Windows 10</span><span>Windows 11</span></div><div><strong>Linux</strong><span>Astra Linux 1.8</span><span>РЕД ОС 8</span><span>Альт 8 СП</span><span>РОСА «Хром»</span></div></div><small>Перечень версий подлежит финальной проверке перед публикацией.</small></article>
+          <article class="compat-card reveal"><h3>Что проверить на платформе</h3><ul class="check-list"><li>x86-64 и UEFI</li><li>Secure Boot и режим Custom</li><li>пользовательские ключи</li><li>загрузка USB в EFI-режиме</li><li>отключённый Legacy/CSM</li><li>GPT и ESP</li><li>защита UEFI Setup паролем</li><li>подходящий USB или M.2 Socket 1 Key E с USB 2.0</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pilot-section" id="pilot">
+      <div class="container pilot-shell reveal">
+        <div class="pilot-copy"><p class="eyebrow eyebrow--dark">Практический следующий шаг</p><h2>Начните с одной типовой конфигурации</h2><p>Пилот позволяет проверить UEFI-платформу, выбранный режим загрузки, контролируемые объекты и реакцию на основные сценарии обхода до масштабного внедрения.</p><a class="button button--primary" href="#request">Запросить пилот</a></div>
+        <div class="pilot-steps"><div><span>01</span><strong>Платформа и ОС</strong><small>собираем исходные данные</small></div><div><span>02</span><strong>Модель и режим</strong><small>выбираем исполнение</small></div><div><span>03</span><strong>Настройка</strong><small>Secure Boot, политика, аудит</small></div><div><span>04</span><strong>Проверка</strong><small>штатные и обходные сценарии</small></div><div><span>05</span><strong>Результат</strong><small>ограничения и условия внедрения</small></div></div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container section-heading reveal" id="documentation">
+        <p class="eyebrow eyebrow--dark">Эксплуатационная документация</p><h2>Руководства для CLI и GUI</h2><p>Материалы разделены по роли пользователя и способу работы и входят в автономную сборку сайта.</p>
+      </div>
+      <div class="container documentation-grid">
+        <article class="document-card reveal"><span>CLI · администратор</span><h3>Руководство администратора</h3><p>Установка, настройка и эксплуатация через командную строку.</p><small>81 страница · PDF</small><a href="docs/manuals/LiveTSM-руководство-администратора-CLI.pdf" target="_blank" rel="noopener">Открыть документ</a></article>
+        <article class="document-card reveal"><span>GUI · администратор</span><h3>Руководство администратора</h3><p>Установка, настройка и эксплуатация через графический интерфейс.</p><small>64 страницы · PDF</small><a href="docs/manuals/LiveTSM-руководство-администратора-GUI.pdf" target="_blank" rel="noopener">Открыть документ</a></article>
+        <article class="document-card reveal"><span>CLI · пользователь</span><h3>Руководство пользователя</h3><p>Работа с LiveTSM через интерфейс командной строки.</p><small>20 страниц · PDF</small><a href="docs/manuals/LiveTSM-руководство-пользователя-CLI.pdf" target="_blank" rel="noopener">Открыть документ</a></article>
+        <article class="document-card reveal"><span>GUI · пользователь</span><h3>Руководство пользователя</h3><p>Работа с LiveTSM через графический интерфейс.</p><small>22 страницы · PDF</small><a href="docs/manuals/LiveTSM-руководство-пользователя-GUI.pdf" target="_blank" rel="noopener">Открыть документ</a></article>
+      </div>
+      <div class="container section-heading section-heading--center reveal"><p class="eyebrow eyebrow--dark">FAQ</p><h2>Частые вопросы</h2></div>
+      <div class="container faq-list">
+        <details class="faq-item reveal" open><summary>Нужно ли изменять базовую прошивку?</summary><p>Нет. LiveTSM использует штатные механизмы UEFI и Secure Boot в режиме Custom.</p></details>
+        <details class="faq-item reveal"><summary>Можно ли обойти LiveTSM, выбрав другую Boot Entry?</summary><p>В целевой конфигурации Secure Boot проверяет подпись EFI-компонента независимо от его места в Boot Order. Сам приоритет записи не делает загрузчик доверенным.</p></details>
+        <details class="faq-item reveal"><summary>Что будет, если отключить LiveTSM?</summary><p>При сохранённой защищённой конфигурации доверенная точка входа будет отсутствовать и штатная защищённая загрузка станет недоступной до административного восстановления.</p></details>
+        <details class="faq-item reveal"><summary>Чем отличаются T110, E110 и C110?</summary><p>Это варианты эксплуатационного сценария: автоматический без локального пользователя, пользовательский для стационарного рабочего места и пользовательский для мобильного оборудования. Форм-фактор конкретного исполнения уточняется отдельно.</p></details>
+        <details class="faq-item reveal"><summary>Можно ли использовать LiveTSM без локального пользователя?</summary><p>Да. Для таких сценариев предназначено семейство TSMX-T110.</p></details>
+      </div>
+    </section>
+
+    <section class="section request-section" id="request">
+      <div class="container request-shell">
+        <div class="request-copy reveal"><p class="eyebrow">Проверка применимости</p><h2>Расскажите о платформе — начнём с технического pre-check</h2><p>Для первого шага достаточно модели оборудования, версии UEFI и целевой ОС. Форма в этой внутренней версии не отправляет данные во внешние системы.</p><div class="request-proof"><span>01</span><p><strong>Подберём исполнение</strong><small>USB Type-A или M.2 2230 A+E</small></p></div><div class="request-proof"><span>02</span><p><strong>Проверим UEFI</strong><small>Secure Boot Custom, Boot Entry и условия платформы</small></p></div><div class="request-proof"><span>03</span><p><strong>Сформируем пилот</strong><small>с проверяемыми критериями PASS / FAIL</small></p></div></div>
+        <form class="request-form reveal" id="requestForm">
+          <!-- VERIFY_BEFORE_PUBLICATION:LEAD_ROUTE -->
+          <!-- VERIFY_BEFORE_PUBLICATION:PRIVACY -->
+          <div class="form-grid">
+            <label><span>Организация</span><input required name="company" autocomplete="organization" placeholder="Название организации"></label>
+            <label><span>Имя</span><input required name="name" autocomplete="name" placeholder="Контактное лицо"></label>
+            <label><span>Рабочая почта</span><input required type="email" name="email" autocomplete="email" placeholder="name@company.ru"></label>
+            <label><span>Телефон</span><input name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+            <label><span>Платформа</span><input name="platform" placeholder="Модель ПК, сервера или appliance"></label>
+            <label><span>ОС</span><input name="os" placeholder="Windows 11, Astra Linux 1.8..."></label>
+            <label class="wide"><span>Задача</span><textarea name="task" rows="5" placeholder="Что нужно защитить и какой сценарий загрузки ожидается"></textarea></label>
+            <label class="consent wide"><input required type="checkbox"><span>Согласие на обработку данных для демонстрационного запроса</span></label>
+          </div>
+          <button class="button button--primary button--full" type="submit">Отправить запрос</button>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a class="brand brand--footer" href="#top"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__name"><small>Aladdin</small><strong>LiveTSM</strong></span></a><p>Средство доверенной загрузки для x86-64-платформ с UEFI.</p></div>
+      <nav><a href="#architecture">Как работает</a><a href="#modes">Режимы</a><a href="#models">Модели</a><a href="#compliance">Соответствие</a><a href="#compatibility">Совместимость</a><a href="#documentation">Документация</a><a href="#pilot">Пилот</a></nav>
+      <div class="footer__meta"><p>АО «Аладдин Р.Д.»</p><p>Макет для внутренней продуктовой и маркетинговой проверки</p></div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
