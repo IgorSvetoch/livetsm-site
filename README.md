@@ -20,3 +20,7 @@ PDF-руководства, материалы сертификации и вн�
 ## Вводная видеопрезентация
 
 Раздел `#video`: LiveTSM за 5 минут (4:59), с русской озвучкой и полными встроенными субтитрами. Плеер не запускается автоматически. Доступны MP4, SRT и полный текст; добавлена ссылка на видео в Sales Kit. Рабочие материалы монтажа не публикуются.
+
+- [Смотреть видеопрезентацию на промосайте](https://igorsvetoch.github.io/livetsm-site/#video)
+- [Смотреть видеопрезентацию в Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/#video)
+- [Открыть или скачать MP4 — 4:59, 11,4 МБ](https://igorsvetoch.github.io/livetsm-site/assets/video/livetsm-overview-v1.mp4)
