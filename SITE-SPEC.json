@@ -1,7 +1,7 @@
 {
   "specification": {
     "name": "Aladdin LiveTSM website canonical specification",
-    "version": "1.8.4",
+    "version": "1.8.5",
     "updated": "2026-11-06",
     "language": "ru",
     "human_source": "SITE-SPEC.md",
@@ -512,6 +512,8 @@
       "screenshots",
       "work scripts"
     ],
-    "readme_scope": "public files only"
+    "readme_scope": "public files only",
+    "asset_cache_version": "20261106-1",
+    "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup"
   }
 }
