@@ -1,7 +1,7 @@
 {
   "specification": {
     "name": "Aladdin LiveTSM website canonical specification",
-    "version": "1.8.6",
+    "version": "1.8.7",
     "updated": "2026-11-06",
     "language": "ru",
     "human_source": "SITE-SPEC.md",
@@ -325,6 +325,7 @@
   "information_architecture": [
     "header_navigation",
     "hero",
+    "introductory_video",
     "os_protection_problem",
     "bds_boundary",
     "verification_process",
@@ -349,7 +350,11 @@
       "Совместимость",
       "Документация"
     ],
-    "primary_cta": null
+    "primary_cta": null,
+    "hero_video_link": {
+      "label": "Смотреть видео · 5 минут",
+      "href": "#video"
+    }
   },
   "faq_topics": [
     "модификация прошивки",
@@ -513,18 +518,23 @@
       "work scripts"
     ],
     "readme_scope": "public files only",
-    "asset_cache_version": "20261106-2",
+    "asset_cache_version": "20261106-3",
     "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup",
-    "release_id": "3.7-icons-contacts-20261106",
-    "public_file_count": 14
+    "release_id": "3.7-icons-contacts-video-20261106",
+    "public_file_count": 17,
+    "video_files": [
+      "assets/video/livetsm-overview-v1.mp4",
+      "assets/video/livetsm-overview-v1.jpg",
+      "assets/video/livetsm-overview-v1.ru.srt"
+    ]
   },
   "pictograms": {
     "status": "approved_for_publication",
     "approved_on": "2026-11-06",
     "format": "inline SVG symbols",
     "symbols": 33,
-    "instances": 68,
-    "coverage": "all 13 main content sections and official footer contacts",
+    "instances": 69,
+    "coverage": "all 14 main content sections, including introductory video, and official footer contacts",
     "style": {
       "format": "inline SVG symbols",
       "grid": "24 x 24",
@@ -575,5 +585,83 @@
     "anchor": "contacts",
     "presentation": "third footer column; one column on mobile; 48px link height",
     "forms": false
-  }
+  },
+  "video_presentation": {
+    "id": "livetsm-overview-v1",
+    "title": "LiveTSM за 5 минут",
+    "anchor": "video",
+    "position": "after hero",
+    "owner_approved_on": "2026-11-06",
+    "publication_authorized": true,
+    "status": "prepared_for_publication",
+    "duration_seconds": 299.37,
+    "display_duration": "4:59",
+    "source": "approved full presentation v4",
+    "video": "assets/video/livetsm-overview-v1.mp4",
+    "poster": "assets/video/livetsm-overview-v1.jpg",
+    "subtitles_download": "assets/video/livetsm-overview-v1.ru.srt",
+    "burned_in_subtitles": true,
+    "native_controls": true,
+    "playsinline": true,
+    "preload": "none",
+    "autoplay": false,
+    "duplicate_caption_track": false,
+    "transcript": "native details with complete six-chapter written narration",
+    "sales_kit_url": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video",
+    "hero_link": "Смотреть видео · 5 минут",
+    "main_navigation_unchanged": true,
+    "responsive": "single 16:9 player, width 100%, no cropping; wrapped download links",
+    "synthetic_voice_disclosed": true,
+    "private_working_files_published": false,
+    "preserved": [
+      "existing page sections",
+      "certification wording",
+      "CLI/GUI independence",
+      "photos",
+      "existing scenario illustrations",
+      "no-pilot policy"
+    ]
+  },
+  "release_history": [
+    {
+      "date": "2026-11-06",
+      "basis": "approved 3.7 layout",
+      "new_boot_path_visualization": "rejected; original section retained",
+      "photos": [
+        {
+          "url": "https://igorsvetoch.github.io/livetsm-sales-kit/photos/LiveTSM_USB_from_TU.png",
+          "dimensions": [
+            622,
+            317
+          ],
+          "label": "USB Type-A"
+        },
+        {
+          "url": "https://igorsvetoch.github.io/livetsm-sales-kit/photos/LiveTSM_M2_USB_from_TU.png",
+          "dimensions": [
+            318,
+            269
+          ],
+          "label": "M.2 2230 A+E"
+        }
+      ],
+      "photo_pixels_unchanged": true,
+      "photo_aspect_ratio_preserved": true,
+      "different_scales_note": true,
+      "jacarta_xl_labels": false,
+      "excluded": [
+        "PDF manuals",
+        "certification decision file",
+        "internal documents",
+        "archives",
+        "screenshots",
+        "work scripts"
+      ],
+      "readme_scope": "public files only",
+      "asset_cache_version": "20261106-2",
+      "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup",
+      "release_id": "3.7-icons-contacts-20261106",
+      "public_file_count": 14
+    }
+  ]
 }
