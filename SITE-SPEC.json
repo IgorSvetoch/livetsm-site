@@ -1,7 +1,7 @@
 {
   "specification": {
     "name": "Aladdin LiveTSM website canonical specification",
-    "version": "1.8.5",
+    "version": "1.8.6",
     "updated": "2026-11-06",
     "language": "ru",
     "human_source": "SITE-SPEC.md",
@@ -513,7 +513,67 @@
       "work scripts"
     ],
     "readme_scope": "public files only",
-    "asset_cache_version": "20261106-1",
-    "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup"
+    "asset_cache_version": "20261106-2",
+    "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup",
+    "release_id": "3.7-icons-contacts-20261106",
+    "public_file_count": 14
+  },
+  "pictograms": {
+    "status": "approved_for_publication",
+    "approved_on": "2026-11-06",
+    "format": "inline SVG symbols",
+    "symbols": 33,
+    "instances": 68,
+    "coverage": "all 13 main content sections and official footer contacts",
+    "style": {
+      "format": "inline SVG symbols",
+      "grid": "24 x 24",
+      "stroke_width": 1.7,
+      "line_caps": "round",
+      "section_tile": 40,
+      "card_icon": 28,
+      "inline_icon": 22,
+      "light_color": "#28668d",
+      "dark_color": "#8bd5ed",
+      "same_family_everywhere": true,
+      "external_dependencies": false,
+      "decorative_aria_hidden": true
+    },
+    "decorative": true,
+    "existing_numbering_preserved": true,
+    "approved_scenario_illustrations_preserved": true,
+    "photos_and_technical_diagrams_unchanged": true,
+    "stylesheet": "css/pictograms.css",
+    "external_dependencies": false,
+    "footer_icon_size_px": 20,
+    "certification_icon": "neutral document search; not a certificate seal"
+  },
+  "official_contacts": {
+    "company": "АО «Аладдин Р.Д.»",
+    "source_url": "https://www.aladdin-rd.ru/company/contacts/",
+    "partner_source_url": "https://www.aladdin-rd.ru/buy/",
+    "verified_on": "2026-11-06",
+    "general_phone": {
+      "display": "+7 (495) 223-00-01",
+      "href": "tel:+74952230001",
+      "label": "Общие вопросы"
+    },
+    "email": {
+      "display": "aladdin@aladdin.ru",
+      "href": "mailto:aladdin@aladdin.ru"
+    },
+    "partner_email": {
+      "display": "partners@aladdin.ru",
+      "href": "mailto:partners@aladdin.ru",
+      "label": "Партнёрство",
+      "scope": "партнёрские условия и статусы, общее партнёрское взаимодействие"
+    },
+    "address": "129226, Москва, ул. Докукина, д. 16, стр. 1",
+    "office_hours": "10:00–19:00, кроме выходных и праздничных дней",
+    "support_contacts_displayed": false,
+    "separate_commercial_phone_found": false,
+    "anchor": "contacts",
+    "presentation": "third footer column; one column on mobile; 48px link height",
+    "forms": false
   }
 }

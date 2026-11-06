@@ -6,9 +6,12 @@
   <meta name="theme-color" content="#07111f">
   <meta name="description" content="Aladdin LiveTSM — средство доверенной загрузки для x86-64-платформ с UEFI. Контроль разрешённого сценария запуска до старта операционной системы.">
   <title>Aladdin LiveTSM — доверенная загрузка до старта ОС</title>
-  <link rel="stylesheet" href="css/styles.css?v=20261106-1">
+  <link rel="stylesheet" href="css/styles.css?v=20261106-2">
+  <link rel="stylesheet" href="css/pictograms.css?v=20261106-2">
 </head>
-<body>
+<body class="pictogram-site">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="pictogram-sprite"><defs><symbol id="pi-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4-4.2 7.1-8 9-3.8-1.9-8-5-8-9V6Z"/><path d="M12 8v5m-3-3a4 4 0 1 0 6 0"/></symbol><symbol id="pi-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 3v3m6-3v3m-6 12v3m6-3v3M3 9h3m-3 6h3m12-6h3m-3 6h3"/></symbol><symbol id="pi-branch" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><path d="M6 16V7m0 7c0-5 12-1 12-7"/></symbol><symbol id="pi-module" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><rect x="8" y="9" width="5" height="6" rx="1"/><path d="M16 10h1m-1 4h1M8 3v3m4-3v3m4-3v3M8 18v3m4-3v3m4-3v3"/></symbol><symbol id="pi-usb" viewBox="0 0 24 24"><rect x="6" y="8" width="12" height="13" rx="3"/><path d="M8 8V3h8v5m-5-3v1m2-1v1M9 17h6"/></symbol><symbol id="pi-file-change" viewBox="0 0 24 24"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5m2-18 5 5h-5V3M8 11h5m-5 4h2m4 4 5-5 2 2-5 5h-2Z"/></symbol><symbol id="pi-route" viewBox="0 0 24 24"><path d="M3 7h7a4 4 0 0 1 0 8H7a3 3 0 0 0 0 6h11m-3-3 3 3-3 3" transform="translate(0 -3)"/><path d="m15 5 5 5m0-5-5 5"/></symbol><symbol id="pi-boundary" viewBox="0 0 24 24"><path d="M12 3v3m0 3v6m0 3v3M3 12h6m-3-3 3 3-3 3m10-3h5m-3-3 3 3-3 3"/></symbol><symbol id="pi-checklist" viewBox="0 0 24 24"><rect x="5" y="4" width="15" height="17" rx="2"/><path d="M9 2h7v4H9ZM8 11l1.5 1.5L12 10m2 2h3m-9 5 1.5 1.5L12 16m2 2h3"/></symbol><symbol id="pi-user" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2M8 21h8"/></symbol><symbol id="pi-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></symbol><symbol id="pi-sliders" viewBox="0 0 24 24"><path d="M4 6h3m4 0h9M4 12h9m4 0h3M4 18h3m4 0h9"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="9" cy="18" r="2"/></symbol><symbol id="pi-log" viewBox="0 0 24 24"><path d="M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6ZM4 7h4m-4 5h4m-4 5h4m4-10h5m-5 5h5m-5 5h3"/></symbol><symbol id="pi-chain" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="2"/><rect x="14" y="13" width="7" height="7" rx="2"/><path d="M10 7h6a2 2 0 0 1 2 2v4M6 11v6a2 2 0 0 0 2 2h6"/></symbol><symbol id="pi-direct" viewBox="0 0 24 24"><rect x="3" y="6" width="5" height="12" rx="1.5"/><rect x="16" y="6" width="5" height="12" rx="1.5"/><path d="M8 12h8m-3-3 3 3-3 3"/></symbol><symbol id="pi-unplug" viewBox="0 0 24 24"><path d="m7 3 3 3m3-3 3 3M5 8l3-3 8 8-3 3a4 4 0 0 1-6 0L5 14a4 4 0 0 1 0-6Zm9 10 4 4m-9-5-4 4m13-12 3-3m-1 7h2"/></symbol><symbol id="pi-doc-search" viewBox="0 0 24 24"><path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6M13 3l5 5h-5V3M7 8h3m-3 4h3"/><circle cx="16" cy="16" r="4"/><path d="m19 19 3 3"/></symbol><symbol id="pi-building" viewBox="0 0 24 24"><path d="M4 21V5h12v16M2 21h20m-6-11h4v11M8 9h1m3 0h1m-5 4h1m3 0h1M8 21v-4h4v4"/></symbol><symbol id="pi-factory" viewBox="0 0 24 24"><path d="M3 21V10l6 3V9l6 4V4h4l2 17ZM7 17h1m3 0h1m4 0h1"/></symbol><symbol id="pi-id-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M5 16a3 3 0 0 1 6 0m3-6h4m-4 4h4"/></symbol><symbol id="pi-network" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="6" rx="1.5"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/><path d="M12 9v4m-7 3v-3h14v3"/></symbol><symbol id="pi-assemble" viewBox="0 0 24 24"><path d="m12 3 8 4-8 4-8-4Zm-8 8 8 4 8-4m-8 4v6m-8-6 8 6 8-6"/></symbol><symbol id="pi-devices" viewBox="0 0 24 24"><rect x="3" y="4" width="14" height="11" rx="2"/><rect x="15" y="11" width="6" height="10" rx="1.5"/><path d="M7 19h5m-2-4v4m8-1h.01"/></symbol><symbol id="pi-link" viewBox="0 0 24 24"><path d="m10 8 2-2a4 4 0 0 1 6 6l-2 2m-2 2-2 2a4 4 0 0 1-6-6l2-2m1 5 6-6"/></symbol><symbol id="pi-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01m3 0h.01M7 13h4v4H7m8-4h2m-2 4h2"/></symbol><symbol id="pi-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></symbol><symbol id="pi-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15M6 8h3m-3 4h3m6-4h3m-3 4h3"/></symbol><symbol id="pi-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 4m0 3h.01"/></symbol><symbol id="pi-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M11 6.5h6M7 17.5h.01M11 17.5h6"/></symbol><symbol id="pi-pulse" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol><symbol id="pi-file-check" viewBox="0 0 24 24"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10M13 3l7 7h-7V3M8 15l3 3 5-6"/></symbol><symbol id="pi-phone" viewBox="0 0 24 24"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a15 15 0 0 1-7-7l2-2Z"/></symbol><symbol id="pi-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol></defs></svg>
+
   <a class="skip-link" href="#main">К основному содержанию</a>
 
   <header class="header" id="top">
@@ -51,13 +54,13 @@
       <div class="hero__glow hero__glow--right" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__copy reveal">
-          <p class="eyebrow">Средство доверенной загрузки для x86-64 и UEFI</p>
+          <p class="pictogram-eyebrow eyebrow"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-shield"></use></svg></span><span class="pictogram-eyebrow__text">Средство доверенной загрузки для x86-64 и UEFI</span></p>
           <h1>Контроль загрузки <span>до старта операционной системы</span></h1>
           <p class="hero__lead">Aladdin LiveTSM включается в загрузочную цепочку на этапе UEFI BDS, выполняет предусмотренные предзагрузочные проверки и только после этого разрешает или блокирует запуск штатной ОС.</p>
           <div class="hero__benefits" aria-label="Ключевые преимущества">
-            <div><strong>Без модификации прошивки</strong><span>использует штатные механизмы UEFI</span></div>
-            <div><strong>Два режима загрузки</strong><span>совместимость или прямой запуск Linux</span></div>
-            <div><strong>Два форм-фактора</strong><span>USB Type-A и M.2 2230 A+E</span></div>
+            <div><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-chip"></use></svg><strong>Без модификации прошивки</strong><span>использует штатные механизмы UEFI</span></div>
+            <div><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-branch"></use></svg><strong>Два режима загрузки</strong><span>совместимость или прямой запуск Linux</span></div>
+            <div><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-module"></use></svg><strong>Два форм-фактора</strong><span>USB Type-A и M.2 2230 A+E</span></div>
           </div>
           <div class="hero__actions">
             
@@ -75,31 +78,31 @@
         </div>
       </div>
       <div class="container fact-strip reveal" aria-label="Ключевые факты о продукте">
-        <div><strong>BDS</strong><span>точка начала действия</span></div>
-        <div><strong>Secure Boot Custom</strong><span>доверенный вход в LiveTSM</span></div>
-        <div><strong>USB 2.0</strong><span>интерфейс всех аппаратных исполнений</span></div>
-        <div><strong>2 режима</strong><span>штатный загрузчик или прямой Linux</span></div>
+        <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-boundary"></use></svg><span class="pictogram-label__text">BDS</span></strong><span>точка начала действия</span></div>
+        <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-shield"></use></svg><span class="pictogram-label__text">Secure Boot Custom</span></strong><span>доверенный вход в LiveTSM</span></div>
+        <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-usb"></use></svg><span class="pictogram-label__text">USB 2.0</span></strong><span>интерфейс всех аппаратных исполнений</span></div>
+        <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-branch"></use></svg><span class="pictogram-label__text">2 режима</span></strong><span>штатный загрузчик или прямой Linux</span></div>
       </div>
     </section>
 
     <section class="section intro-section">
       <div class="container intro-grid">
         <div class="section-heading reveal">
-          <p class="eyebrow eyebrow--dark">Почему нужен отдельный предзагрузочный уровень</p>
+          <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-route"></use></svg></span><span class="pictogram-eyebrow__text">Почему нужен отдельный предзагрузочный уровень</span></p>
           <h2>Защита внутри ОС начинается слишком поздно, чтобы контролировать сам факт её запуска</h2>
           <p>Антивирус, EDR, контроль приложений и другие механизмы работают после старта операционной системы. LiveTSM решает другую задачу: контролирует, какая среда вообще получит управление.</p>
         </div>
         <div class="risk-stack reveal">
-          <article><span>01</span><div><h3>Альтернативная ОС</h3><p>Внешний носитель, второй диск или другая Boot Entry создают иной путь запуска.</p></div></article>
-          <article><span>02</span><div><h3>Изменённые компоненты</h3><p>Подмена загрузчика, ядра, initramfs, UKI или контролируемого объекта меняет разрешённую конфигурацию.</p></div></article>
-          <article><span>03</span><div><h3>Обход защиты штатной ОС</h3><p>Нештатная среда может попытаться обойти механизмы доступа, которые ещё не запущены.</p></div></article>
+          <article><span>01</span><div><h3 class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-usb"></use></svg><span class="pictogram-label__text">Альтернативная ОС</span></h3><p>Внешний носитель, второй диск или другая Boot Entry создают иной путь запуска.</p></div></article>
+          <article><span>02</span><div><h3 class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-file-change"></use></svg><span class="pictogram-label__text">Изменённые компоненты</span></h3><p>Подмена загрузчика, ядра, initramfs, UKI или контролируемого объекта меняет разрешённую конфигурацию.</p></div></article>
+          <article><span>03</span><div><h3 class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-route"></use></svg><span class="pictogram-label__text">Обход защиты штатной ОС</span></h3><p>Нештатная среда может попытаться обойти механизмы доступа, которые ещё не запущены.</p></div></article>
         </div>
       </div>
     </section>
 
     <section class="section section--soft" id="architecture">
       <div class="container section-heading section-heading--center reveal">
-        <p class="eyebrow eyebrow--dark">Граница ответственности</p>
+        <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-boundary"></use></svg></span><span class="pictogram-eyebrow__text">Граница ответственности</span></p>
         <h2>LiveTSM начинает действовать на этапе BDS</h2>
         <p>До BDS доверенная инициализация относится к аппаратной платформе и базовой прошивке производителя. На BDS штатный Secure Boot проверяет доверенный компонент LiveTSM и передаёт ему управление.</p>
       </div>
@@ -108,7 +111,7 @@
           <div class="phase phase--platform">
             <span class="phase__eyebrow">До BDS</span>
             <div class="phase__chips"><span>SEC</span><span>PEI</span><span>DXE</span></div>
-            <h3>Доверенная основа платформы</h3>
+            <h3 class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-chip"></use></svg><span class="pictogram-label__text">Доверенная основа платформы</span></h3>
             <p>Инициализация процессора, памяти, устройств и базовых сервисов UEFI выполняется до запуска LiveTSM.</p>
           </div>
           <div class="bds-line">
@@ -119,7 +122,7 @@
           <div class="phase phase--product">
             <span class="phase__eyebrow">После BDS</span>
             <div class="phase__chips phase__chips--active"><span>самотест</span><span>ИА</span><span>платформа</span><span>целостность</span><span>аудит</span></div>
-            <h3>Зона действия LiveTSM</h3>
+            <h3 class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-shield"></use></svg><span class="pictogram-label__text">Зона действия LiveTSM</span></h3>
             <p>Продукт выполняет предусмотренные проверки и принимает решение о продолжении или блокировании штатной загрузки.</p>
           </div>
           <div class="notice"><strong>Граница продукта:</strong> LiveTSM не контролирует SEC, PEI и DXE и не заменяет механизмы доверия базовой платформы.</div>
@@ -135,15 +138,15 @@
     <section class="section process-section">
       <div class="container process-grid">
         <div class="process-copy reveal">
-          <p class="eyebrow eyebrow--dark">Логика работы</p>
+          <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-checklist"></use></svg></span><span class="pictogram-eyebrow__text">Логика работы</span></p>
           <h2>Сначала проверить — затем запускать</h2>
           <p class="lead">LiveTSM формирует решение не по одному признаку. Перед handoff к ОС продукт последовательно проверяет собственное состояние, пользователя, платформу и заданные объекты.</p>
           <ol class="process-list">
-            <li><span>01</span><div><strong>Доверенный запуск</strong><p>Secure Boot проверяет компонент LiveTSM.</p></div></li>
-            <li><span>02</span><div><strong>Самотестирование</strong><p>Проверяется готовность функций безопасности.</p></div></li>
-            <li><span>03</span><div><strong>Пользователь и платформа</strong><p>Выполняется ИА и проверка аппаратного профиля.</p></div></li>
-            <li><span>04</span><div><strong>Объекты загрузки</strong><p>Контролируются назначенные политикой компоненты.</p></div></li>
-            <li><span>05</span><div><strong>Решение</strong><p>Загрузка разрешается либо блокируется с регистрацией события.</p></div></li>
+            <li><span>01</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-file-check"></use></svg><span class="pictogram-label__text">Доверенный запуск</span></strong><p>Secure Boot проверяет компонент LiveTSM.</p></div></li>
+            <li><span>02</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-pulse"></use></svg><span class="pictogram-label__text">Самотестирование</span></strong><p>Проверяется готовность функций безопасности.</p></div></li>
+            <li><span>03</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-user"></use></svg><span class="pictogram-label__text">Пользователь и платформа</span></strong><p>Выполняется ИА и проверка аппаратного профиля.</p></div></li>
+            <li><span>04</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-layers"></use></svg><span class="pictogram-label__text">Объекты загрузки</span></strong><p>Контролируются назначенные политикой компоненты.</p></div></li>
+            <li><span>05</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-branch"></use></svg><span class="pictogram-label__text">Решение</span></strong><p>Загрузка разрешается либо блокируется с регистрацией события.</p></div></li>
           </ol>
         </div>
         <div class="web-diagram web-diagram--checks reveal" role="img" aria-label="LiveTSM проверяет пользователя, устройство, компоненты загрузки и политику до запуска операционной системы.">
@@ -157,28 +160,28 @@
 
     <section class="section dark-section capability-section">
       <div class="container section-heading section-heading--center reveal">
-        <p class="eyebrow">Что находится под контролем</p>
+        <p class="pictogram-eyebrow eyebrow"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-layers"></use></svg></span><span class="pictogram-eyebrow__text">Что находится под контролем</span></p>
         <h2>Пять объектов решения о загрузке</h2>
       </div>
       <div class="container capability-grid">
-        <article class="capability-card reveal"><span>ID</span><h3>Пользователь</h3><p>Идентификатор, пароль, усиленная аутентификация по паролю и аппаратному токену, ограничения неуспешных попыток.</p></article>
-        <article class="capability-card reveal"><span>HW</span><h3>Аппаратная платформа</h3><p>Сопоставление текущего состава контролируемых компонентов с зафиксированным аппаратным профилем.</p></article>
-        <article class="capability-card reveal"><span>OS</span><h3>Загрузочные объекты</h3><p>Штатный загрузчик, ядро Linux, initramfs, UKI, параметры загрузки и назначенные файлы или папки.</p></article>
-        <article class="capability-card reveal"><span>PL</span><h3>Политика</h3><p>Администратор определяет поддерживаемые режимы, параметры, ограничения и состав объектов контроля.</p></article>
-        <article class="capability-card reveal"><span>AU</span><h3>Аудит</h3><p>Результаты проверок, действия пользователей и изменения параметров регистрируются до запуска ОС.</p></article>
+        <article class="capability-card reveal"><span class="pictogram-code"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-user"></use></svg>ID</span><h3>Пользователь</h3><p>Идентификатор, пароль, усиленная аутентификация по паролю и аппаратному токену, ограничения неуспешных попыток.</p></article>
+        <article class="capability-card reveal"><span class="pictogram-code"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-chip"></use></svg>HW</span><h3>Аппаратная платформа</h3><p>Сопоставление текущего состава контролируемых компонентов с зафиксированным аппаратным профилем.</p></article>
+        <article class="capability-card reveal"><span class="pictogram-code"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-layers"></use></svg>OS</span><h3>Загрузочные объекты</h3><p>Штатный загрузчик, ядро Linux, initramfs, UKI, параметры загрузки и назначенные файлы или папки.</p></article>
+        <article class="capability-card reveal"><span class="pictogram-code"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-sliders"></use></svg>PL</span><h3>Политика</h3><p>Администратор определяет поддерживаемые режимы, параметры, ограничения и состав объектов контроля.</p></article>
+        <article class="capability-card reveal"><span class="pictogram-code"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-log"></use></svg>AU</span><h3>Аудит</h3><p>Результаты проверок, действия пользователей и изменения параметров регистрируются до запуска ОС.</p></article>
       </div>
     </section>
 
     <section class="section modes-section" id="modes">
       <div class="container section-heading section-heading--center reveal">
-        <p class="eyebrow eyebrow--dark">Два режима запуска ОС</p>
+        <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-branch"></use></svg></span><span class="pictogram-eyebrow__text">Два режима запуска ОС</span></p>
         <h2>Баланс между привычной эксплуатацией и сокращённой доверенной цепочкой</h2>
         <p>Оба режима начинаются с проверок LiveTSM. Различается только то, кому продукт передаёт управление после положительного решения.</p>
       </div>
       <div class="container mode-shell reveal">
         <div class="mode-tabs" role="tablist" aria-label="Режимы загрузки">
-          <button class="mode-tab is-active" id="tabCompat" type="button" role="tab" aria-selected="true" aria-controls="panelCompat">Максимальная совместимость</button>
-          <button class="mode-tab" id="tabDirect" type="button" role="tab" aria-selected="false" aria-controls="panelDirect">Прямая загрузка Linux</button>
+          <button class="pictogram-label mode-tab is-active" id="tabCompat" type="button" role="tab" aria-selected="true" aria-controls="panelCompat"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-chain"></use></svg><span class="pictogram-label__text">Максимальная совместимость</span></button>
+          <button class="pictogram-label mode-tab" id="tabDirect" type="button" role="tab" aria-selected="false" aria-controls="panelDirect"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-direct"></use></svg><span class="pictogram-label__text">Прямая загрузка Linux</span></button>
         </div>
         <div class="mode-panel is-active" id="panelCompat" role="tabpanel" aria-labelledby="tabCompat">
           <div class="mode-panel__copy">
@@ -219,20 +222,20 @@
 
     <section class="section section--soft threat-section">
       <div class="container section-heading reveal">
-        <p class="eyebrow eyebrow--dark">Не обещание, а проверяемая логика</p>
+        <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-route"></use></svg></span><span class="pictogram-eyebrow__text">Не обещание, а проверяемая логика</span></p>
         <h2>Что происходит при попытке изменить путь загрузки</h2>
       </div>
       <div class="container threat-list">
-        <article class="threat-item reveal"><span class="threat-item__num">01</span><div><strong>Загрузка с внешнего носителя</strong><p>Secure Boot проверяет EFI-компонент. При целевой базе доверия недоверенный загрузчик не получает управления.</p></div><small>Условие: Secure Boot включён и UEFI Setup защищён.</small></article>
-        <article class="threat-item reveal"><span class="threat-item__num">02</span><div><strong>Другая Boot Entry</strong><p>Приоритет загрузочной записи сам по себе не делает компонент доверенным: подпись всё равно проверяется Secure Boot.</p></div><small>Условие: сторонний ключ отсутствует в базе доверия.</small></article>
-        <article class="threat-item reveal"><span class="threat-item__num">03</span><div><strong>Физическое отключение LiveTSM</strong><p>В целевой конфигурации исчезает доверенная точка входа, поэтому защищённая штатная загрузка становится недоступной.</p></div><small>Восстановление выполняет уполномоченный администратор.</small></article>
-        <article class="threat-item reveal"><span class="threat-item__num">04</span><div><strong>Изменение контролируемого объекта</strong><p>LiveTSM обнаруживает несоответствие эталону и применяет предусмотренную политикой защитную реакцию.</p></div><small>Условие: объект включён в политику контроля.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">01</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-usb"></use></svg><span class="pictogram-label__text">Загрузка с внешнего носителя</span></strong><p>Secure Boot проверяет EFI-компонент. При целевой базе доверия недоверенный загрузчик не получает управления.</p></div><small>Условие: Secure Boot включён и UEFI Setup защищён.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">02</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-branch"></use></svg><span class="pictogram-label__text">Другая Boot Entry</span></strong><p>Приоритет загрузочной записи сам по себе не делает компонент доверенным: подпись всё равно проверяется Secure Boot.</p></div><small>Условие: сторонний ключ отсутствует в базе доверия.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">03</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-unplug"></use></svg><span class="pictogram-label__text">Физическое отключение LiveTSM</span></strong><p>В целевой конфигурации исчезает доверенная точка входа, поэтому защищённая штатная загрузка становится недоступной.</p></div><small>Восстановление выполняет уполномоченный администратор.</small></article>
+        <article class="threat-item reveal"><span class="threat-item__num">04</span><div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-file-change"></use></svg><span class="pictogram-label__text">Изменение контролируемого объекта</span></strong><p>LiveTSM обнаруживает несоответствие эталону и применяет предусмотренную политикой защитную реакцию.</p></div><small>Условие: объект включён в политику контроля.</small></article>
       </div>
     </section>
 
     <section class="section models-section" id="models">
       <div class="container section-heading reveal">
-        <p class="eyebrow eyebrow--dark">Линейка LiveTSM</p>
+        <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-module"></use></svg></span><span class="pictogram-eyebrow__text">Линейка LiveTSM</span></p>
         <h2>Сначала сценарий — затем форм-фактор</h2>
         <p>Все исполнения реализуют одинаковый состав функций безопасности. Выбор начинается с режима эксплуатации и способа установки.</p>
       </div>
@@ -254,26 +257,26 @@
         </article>
       </div>
       <div class="container form-factors reveal" aria-label="Форм-факторы LiveTSM">
-        <div class="form-factor-heading"><strong>Форм-факторы LiveTSM</strong><span>Форм-фактор и маркетинговый сценарий — разные характеристики исполнения.</span><small>Реальные фотографии устройств. Изображения показаны в разном масштабе.</small></div>
+        <div class="form-factor-heading"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-module"></use></svg><strong>Форм-факторы LiveTSM</strong><span>Форм-фактор и маркетинговый сценарий — разные характеристики исполнения.</span><small>Реальные фотографии устройств. Изображения показаны в разном масштабе.</small></div>
         <article><div class="device-photo device-photo--usb"><img src="https://igorsvetoch.github.io/livetsm-sales-kit/photos/LiveTSM_USB_from_TU.png" width="622" height="317" alt="Аппаратный модуль LiveTSM USB Type-A" loading="lazy"></div><span>USB Type-A</span><strong>Внешнее исполнение</strong><small>Подключение без внутренней установки устройства.</small></article>
         <article><div class="device-photo device-photo--m2"><img src="https://igorsvetoch.github.io/livetsm-sales-kit/photos/LiveTSM_M2_USB_from_TU.png" width="318" height="269" alt="Аппаратный модуль LiveTSM M.2 2230 A+E" loading="lazy"></div><span>M.2 2230 A+E</span><strong>Внутреннее исполнение</strong><small>Конструктивный формат; информационный интерфейс — USB 2.0, не PCIe.</small></article>
       </div>
       <div class="container interface-modes reveal" aria-label="Интерфейсы LiveTSM">
-        <div class="interface-heading"><strong>Два интерфейса эксплуатации</strong><span>Интерфейс выбирается по условиям работы и не привязан автоматически к модели или форм-фактору.</span></div>
-        <article><span>CLI</span><strong>Консольный режим — без VGA</strong><p>Полноценная настройка и администрирование через командную строку. Подходит для серверов, сетевых устройств и appliance без видеовыхода.</p></article>
-        <article><span>GUI</span><strong>Графический режим</strong><p>Визуальная оболочка для привычной работы на настольных системах и ноутбуках с экраном.</p></article>
+        <div class="interface-heading"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-sliders"></use></svg><strong>Два интерфейса эксплуатации</strong><span>Интерфейс выбирается по условиям работы и не привязан автоматически к модели или форм-фактору.</span></div>
+        <article><span class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-terminal"></use></svg><span class="pictogram-label__text">CLI</span></span><strong>Консольный режим — без VGA</strong><p>Полноценная настройка и администрирование через командную строку. Подходит для серверов, сетевых устройств и appliance без видеовыхода.</p></article>
+        <article><span class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-window"></use></svg><span class="pictogram-label__text">GUI</span></span><strong>Графический режим</strong><p>Визуальная оболочка для привычной работы на настольных системах и ноутбуках с экраном.</p></article>
       </div>
     </section>
 
     <section class="section compliance-section" id="compliance">
       <div class="container section-heading reveal">
-        <p class="eyebrow eyebrow--dark">Нормативное соответствие</p>
+        <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-doc-search"></use></svg></span><span class="pictogram-eyebrow__text">Нормативное соответствие</span></p>
         <h2>LiveTSM помогает реализовать меры защиты до запуска операционной системы</h2>
         <p>Средство доверенной загрузки применяется как технический компонент системы защиты. Конкретный набор мер и применимость продукта определяются категорией или классом защищённости, моделью угроз и проектными решениями.</p>
       </div>
       <div class="container compliance-grid">
         <article class="compliance-card compliance-card--decision reveal">
-          <span class="compliance-kicker">Статус сертификации</span>
+          <span class="pictogram-label compliance-kicker"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-doc-search"></use></svg><span class="pictogram-label__text">Статус сертификации</span></span>
           <h3>Принято решение о проведении сертификации</h3>
           <p>Решение ФСТЭК России №7553 от 18 ноября 2025 года относится к средству доверенной загрузки Aladdin LiveTSM.</p>
           <ul>
@@ -286,42 +289,42 @@
           <span class="document-availability">Предоставляется по запросу</span>
         </article>
         <article class="compliance-card reveal">
-          <span class="compliance-kicker">Назначение по решению №7553</span>
+          <span class="pictogram-label compliance-kicker"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-building"></use></svg><span class="pictogram-label__text">Назначение по решению №7553</span></span>
           <h3>Системы с высокими требованиями к защищённости</h3>
           <p>Решением предусмотрена сертификация: СДЗ уровня платы расширения 4-го класса защиты и 4-й уровень доверия (УД4).</p>
           <div class="compliance-scope">
-            <div><strong>ГИС</strong><span>1 класс защищённости</span></div>
-            <div><strong>АСУ ТП</strong><span>1 класс защищённости</span></div>
-            <div><strong>ИСПДн</strong><span>1 уровень защищённости</span></div>
-            <div><strong>ЗОКИИ</strong><span>1 категория значимости</span></div>
+            <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-building"></use></svg><span class="pictogram-label__text">ГИС</span></strong><span>1 класс защищённости</span></div>
+            <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-factory"></use></svg><span class="pictogram-label__text">АСУ ТП</span></strong><span>1 класс защищённости</span></div>
+            <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-id-card"></use></svg><span class="pictogram-label__text">ИСПДн</span></strong><span>1 уровень защищённости</span></div>
+            <div><strong class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-network"></use></svg><span class="pictogram-label__text">ЗОКИИ</span></strong><span>1 категория значимости</span></div>
           </div>
           <p class="compliance-footnote">Это назначение зафиксировано в решении о проведении сертификации и не означает, что сертификат уже выдан.</p>
         </article>
       </div>
       <div class="container regulatory-grid reveal">
-        <div class="regulatory-intro"><strong>Нормативные задачи заказчика</strong><span>Функции LiveTSM могут использоваться при реализации предусмотренных мер защиты. Соответствие информационной системы оценивается в целом, а не по факту установки одного продукта.</span></div>
-        <article><strong>Приказ ФСТЭК №117</strong><span>Государственные информационные системы</span></article>
-        <article><strong>Приказ ФСТЭК №239</strong><span>Значимые объекты критической информационной инфраструктуры</span></article>
-        <article><strong>Приказ ФСТЭК №31</strong><span>Автоматизированные системы управления производственными и технологическими процессами</span></article>
-        <article><strong>Приказ ФСТЭК №44</strong><span>Многофункциональные межсетевые экраны</span></article>
+        <div class="regulatory-intro"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-book"></use></svg><strong>Нормативные задачи заказчика</strong><span>Функции LiveTSM могут использоваться при реализации предусмотренных мер защиты. Соответствие информационной системы оценивается в целом, а не по факту установки одного продукта.</span></div>
+        <article><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-building"></use></svg><strong>Приказ ФСТЭК №117</strong><span>Государственные информационные системы</span></article>
+        <article><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-network"></use></svg><strong>Приказ ФСТЭК №239</strong><span>Значимые объекты критической информационной инфраструктуры</span></article>
+        <article><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-factory"></use></svg><strong>Приказ ФСТЭК №31</strong><span>Автоматизированные системы управления производственными и технологическими процессами</span></article>
+        <article><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-server"></use></svg><strong>Приказ ФСТЭК №44</strong><span>Многофункциональные межсетевые экраны</span></article>
       </div>
     </section>
 
     <section class="section dark-section audience-section" id="applications">
       <div class="container audience-layout">
         <div class="section-heading reveal">
-          <p class="eyebrow">Два рынка — одна техническая основа</p>
+          <p class="pictogram-eyebrow eyebrow"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-assemble"></use></svg></span><span class="pictogram-eyebrow__text">Два рынка — одна техническая основа</span></p>
           <h2>LiveTSM можно встроить в новую платформу или использовать для дооснащения существующего парка</h2>
         </div>
         <div class="audience-cards">
-          <article class="audience-card reveal"><span>OEM / производители</span><h3>Дополнить платформу доверенной загрузкой без изменения базовой прошивки</h3><ul><li>подбор исполнения под конструктив платформы;</li><li>безоператорные сценарии;</li><li>меньше изменений в платформе;</li></ul></article>
-          <article class="audience-card reveal"><span>ИТ / ИБ организации</span><h3>Дооснастить существующие рабочие места, серверы и специализированные системы</h3><ul><li>контроль до старта ОС;</li><li>режим совместимости для штатной эксплуатации;</li><li>прямой Linux для сокращённой цепочки;</li></ul></article>
+          <article class="audience-card reveal"><span class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-assemble"></use></svg><span class="pictogram-label__text">OEM / производители</span></span><h3>Дополнить платформу доверенной загрузкой без изменения базовой прошивки</h3><ul><li>подбор исполнения под конструктив платформы;</li><li>безоператорные сценарии;</li><li>меньше изменений в платформе;</li></ul></article>
+          <article class="audience-card reveal"><span class="pictogram-label"><svg class="pictogram pictogram--inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-devices"></use></svg><span class="pictogram-label__text">ИТ / ИБ организации</span></span><h3>Дооснастить существующие рабочие места, серверы и специализированные системы</h3><ul><li>контроль до старта ОС;</li><li>режим совместимости для штатной эксплуатации;</li><li>прямой Linux для сокращённой цепочки;</li></ul></article>
         </div>
       </div>
     </section>
 
     <section class="section applications-section">
-      <div class="container section-heading reveal"><p class="eyebrow eyebrow--dark">Сценарии применения</p><h2>От рабочих мест до специализированных платформ</h2></div>
+      <div class="container section-heading reveal"><p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-devices"></use></svg></span><span class="pictogram-eyebrow__text">Сценарии применения</span></p><h2>От рабочих мест до специализированных платформ</h2></div>
       <div class="container application-grid">
         <article class="application-card application-card--illustrated reveal"><div class="application-art"><span>01</span><img src="assets/illustrations/endpoints.svg" width="320" height="180" alt="" loading="lazy"></div><h3>Рабочие станции и ноутбуки</h3><p>Предзагрузочная аутентификация, контроль загрузчика и назначенных объектов, блокирование альтернативного старта.</p></article>
         <article class="application-card application-card--illustrated reveal"><div class="application-art"><span>02</span><img src="assets/illustrations/servers.svg" width="320" height="180" alt="" loading="lazy"></div><h3>Серверы и ЦОД</h3><p>Контроль загрузочной конфигурации, прямой запуск Linux или UKI, воспроизводимый сценарий старта.</p></article>
@@ -332,25 +335,25 @@
 
     <section class="section compatibility-section" id="compatibility">
       <div class="container compatibility-shell">
-        <div class="section-heading reveal"><p class="eyebrow">Совместимость</p><h2>Требования к платформе известны заранее</h2><p>LiveTSM не позиционируется как устройство «для любого ПК». Совместимость определяется реализацией UEFI, поддержкой Secure Boot Custom и способом подключения.</p></div>
+        <div class="section-heading reveal"><p class="pictogram-eyebrow eyebrow"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-link"></use></svg></span><span class="pictogram-eyebrow__text">Совместимость</span></p><h2>Требования к платформе известны заранее</h2><p>LiveTSM не позиционируется как устройство «для любого ПК». Совместимость определяется реализацией UEFI, поддержкой Secure Boot Custom и способом подключения.</p></div>
         <div class="compatibility-grid">
-          <article class="compat-card reveal"><h3>Операционные системы</h3><div class="os-columns"><div><strong>Windows</strong><span>Windows 10</span><span>Windows 11</span></div><div><strong>Linux</strong><span>Astra Linux 1.8</span><span>РЕД ОС 8</span><span>Альт 8 СП</span><span>РОСА «Хром»</span></div></div><small>Перечень версий подлежит финальной проверке перед публикацией.</small></article>
-          <article class="compat-card reveal"><h3>Что проверить на платформе</h3><ul class="check-list"><li>x86-64 и UEFI</li><li>Secure Boot и режим Custom</li><li>пользовательские ключи</li><li>загрузка USB в EFI-режиме</li><li>отключённый Legacy/CSM</li><li>GPT и ESP</li><li>защита UEFI Setup паролем</li><li>подходящий USB или M.2 Socket 1 Key E с USB 2.0</li></ul></article>
+          <article class="compat-card reveal"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-window"></use></svg><h3>Операционные системы</h3><div class="os-columns"><div><strong>Windows</strong><span>Windows 10</span><span>Windows 11</span></div><div><strong>Linux</strong><span>Astra Linux 1.8</span><span>РЕД ОС 8</span><span>Альт 8 СП</span><span>РОСА «Хром»</span></div></div><small>Перечень версий подлежит финальной проверке перед публикацией.</small></article>
+          <article class="compat-card reveal"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-checklist"></use></svg><h3>Что проверить на платформе</h3><ul class="check-list"><li>x86-64 и UEFI</li><li>Secure Boot и режим Custom</li><li>пользовательские ключи</li><li>загрузка USB в EFI-режиме</li><li>отключённый Legacy/CSM</li><li>GPT и ESP</li><li>защита UEFI Setup паролем</li><li>подходящий USB или M.2 Socket 1 Key E с USB 2.0</li></ul></article>
         </div>
       </div>
     </section>
 
 <section class="section faq-section">
       <div class="container section-heading reveal" id="documentation">
-        <p class="eyebrow eyebrow--dark">Эксплуатационная документация</p><h2>Руководства для CLI и GUI</h2><p>Материалы разделены по роли пользователя и способу работы. Руководства предоставляются по запросу.</p>
+        <p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-book"></use></svg></span><span class="pictogram-eyebrow__text">Эксплуатационная документация</span></p><h2>Руководства для CLI и GUI</h2><p>Материалы разделены по роли пользователя и способу работы. Руководства предоставляются по запросу.</p>
       </div>
       <div class="container documentation-grid">
-        <article class="document-card reveal"><span>CLI · администратор</span><h3>Руководство администратора</h3><p>Установка, настройка и эксплуатация через командную строку.</p><small>81 страница · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
-        <article class="document-card reveal"><span>GUI · администратор</span><h3>Руководство администратора</h3><p>Установка, настройка и эксплуатация через графический интерфейс.</p><small>64 страницы · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
-        <article class="document-card reveal"><span>CLI · пользователь</span><h3>Руководство пользователя</h3><p>Работа с LiveTSM через интерфейс командной строки.</p><small>20 страниц · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
-        <article class="document-card reveal"><span>GUI · пользователь</span><h3>Руководство пользователя</h3><p>Работа с LiveTSM через графический интерфейс.</p><small>22 страницы · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
+        <article class="document-card reveal"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-book"></use></svg><span>CLI · администратор</span><h3>Руководство администратора</h3><p>Установка, настройка и эксплуатация через командную строку.</p><small>81 страница · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
+        <article class="document-card reveal"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-book"></use></svg><span>GUI · администратор</span><h3>Руководство администратора</h3><p>Установка, настройка и эксплуатация через графический интерфейс.</p><small>64 страницы · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
+        <article class="document-card reveal"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-book"></use></svg><span>CLI · пользователь</span><h3>Руководство пользователя</h3><p>Работа с LiveTSM через интерфейс командной строки.</p><small>20 страниц · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
+        <article class="document-card reveal"><svg class="pictogram pictogram--card" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-book"></use></svg><span>GUI · пользователь</span><h3>Руководство пользователя</h3><p>Работа с LiveTSM через графический интерфейс.</p><small>22 страницы · PDF</small><span class="document-availability">Предоставляется по запросу</span></article>
       </div>
-      <div class="container section-heading section-heading--center reveal"><p class="eyebrow eyebrow--dark">FAQ</p><h2>Частые вопросы</h2></div>
+      <div class="container section-heading section-heading--center reveal"><p class="pictogram-eyebrow eyebrow eyebrow--dark"><span class="pictogram-section"><svg class="pictogram " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-help"></use></svg></span><span class="pictogram-eyebrow__text">FAQ</span></p><h2>Частые вопросы</h2></div>
       <div class="container faq-list">
         <details class="faq-item reveal" open><summary>Нужно ли изменять базовую прошивку?</summary><p>Нет. LiveTSM использует штатные механизмы UEFI и Secure Boot в режиме Custom.</p></details>
         <details class="faq-item reveal"><summary>Можно ли обойти LiveTSM, выбрав другую Boot Entry?</summary><p>В целевой конфигурации Secure Boot проверяет подпись EFI-компонента независимо от его места в Boot Order. Сам приоритет записи не делает загрузчик доверенным.</p></details>
@@ -366,10 +369,21 @@
     <div class="container footer__grid">
       <div><a class="brand brand--footer" href="#top"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__name"><small>Aladdin</small><strong>LiveTSM</strong></span></a><p>Средство доверенной загрузки для x86-64-платформ с UEFI.</p></div>
       <nav><a href="#architecture">Как работает</a><a href="#modes">Режимы</a><a href="#models">Модели</a><a href="#compliance">Соответствие</a><a href="#compatibility">Совместимость</a><a href="#documentation">Документация</a></nav>
-      <div class="footer__meta"><p>АО «Аладдин Р.Д.»</p><p>Средство доверенной загрузки Aladdin LiveTSM</p></div>
+      <div class="footer__contacts" id="contacts" aria-labelledby="footerContactsTitle">
+        <h2 id="footerContactsTitle">АО «Аладдин Р.Д.»</h2>
+        <ul class="footer-contact-list">
+          <li><a class="footer-contact" href="tel:+74952230001"><svg class="pictogram footer-contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-phone"></use></svg><span><small>Общие вопросы</small><strong>+7 (495) 223-00-01</strong></span></a></li>
+          <li><a class="footer-contact" href="mailto:aladdin@aladdin.ru"><svg class="pictogram footer-contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-mail"></use></svg><span><small>Электронная почта</small><strong>aladdin@aladdin.ru</strong></span></a></li>
+          <li><a class="footer-contact" href="mailto:partners@aladdin.ru"><svg class="pictogram footer-contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#pi-assemble"></use></svg><span><small>Партнёрство</small><strong>partners@aladdin.ru</strong></span></a></li>
+        </ul>
+        <address class="footer-contact-address">129226, Москва, ул. Докукина,<br>д. 16, стр. 1</address>
+        <p class="footer-contact-hours">10:00–19:00, кроме выходных<br>и праздничных дней</p>
+        <a class="footer-contact-source" href="https://www.aladdin-rd.ru/company/contacts/" target="_blank" rel="noopener noreferrer">Официальные контакты и схема проезда <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
+    <div class="container footer__note">Средство доверенной загрузки Aladdin LiveTSM</div>
   </footer>
 
-  <script src="js/app.js?v=20261106-1"></script>
+  <script src="js/app.js?v=20261106-2"></script>
 </body>
 </html>
