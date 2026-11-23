@@ -1,8 +1,8 @@
 {
   "specification": {
     "name": "Aladdin LiveTSM website canonical specification",
-    "version": "1.8.7",
-    "updated": "2026-11-06",
+    "version": "1.8.8",
+    "updated": "2026-11-23",
     "language": "ru",
     "human_source": "SITE-SPEC.md",
     "machine_source": "SITE-SPEC.json",
@@ -484,7 +484,7 @@
     "approved_by": "product_owner"
   },
   "public_release": {
-    "date": "2026-11-06",
+    "date": "2026-11-23",
     "basis": "approved 3.7 layout",
     "new_boot_path_visualization": "rejected; original section retained",
     "photos": [
@@ -520,13 +520,15 @@
     "readme_scope": "public files only",
     "asset_cache_version": "20261106-3",
     "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup",
-    "release_id": "3.7-icons-contacts-video-20261106",
+    "release_id": "3.7-video-v6-20261123",
     "public_file_count": 17,
     "video_files": [
       "assets/video/livetsm-overview-v1.mp4",
       "assets/video/livetsm-overview-v1.jpg",
       "assets/video/livetsm-overview-v1.ru.srt"
-    ]
+    ],
+    "media_cache_version": "video-v6-20261123",
+    "status": "prepared_for_publication"
   },
   "pictograms": {
     "status": "approved_for_publication",
@@ -591,12 +593,12 @@
     "title": "LiveTSM за 5 минут",
     "anchor": "video",
     "position": "after hero",
-    "owner_approved_on": "2026-11-06",
+    "owner_approved_on": "2026-11-23",
     "publication_authorized": true,
     "status": "prepared_for_publication",
-    "duration_seconds": 299.37,
-    "display_duration": "4:59",
-    "source": "approved full presentation v4",
+    "duration_seconds": 297.0,
+    "display_duration": "4:57",
+    "source": "approved full presentation v6",
     "video": "assets/video/livetsm-overview-v1.mp4",
     "poster": "assets/video/livetsm-overview-v1.jpg",
     "subtitles_download": "assets/video/livetsm-overview-v1.ru.srt",
@@ -607,7 +609,7 @@
     "autoplay": false,
     "duplicate_caption_track": false,
     "transcript": "native details with complete six-chapter written narration",
-    "sales_kit_url": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video",
+    "sales_kit_url": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html?v=video-v6-20261123#video",
     "hero_link": "Смотреть видео · 5 минут",
     "main_navigation_unchanged": true,
     "responsive": "single 16:9 player, width 100%, no cropping; wrapped download links",
@@ -620,7 +622,18 @@
       "photos",
       "existing scenario illustrations",
       "no-pilot policy"
-    ]
+    ],
+    "media_revision": "v6",
+    "cache_version": "video-v6-20261123",
+    "sha256": "dbfc47aca3506fc04cd7703a64b4fdbbf662e345e0de26554ed2d47d0074390f",
+    "bytes": 11344923,
+    "live_verified": false,
+    "promo_live_verified": false,
+    "sales_kit_live_verified": false,
+    "video_url": "assets/video/livetsm-overview-v1.mp4?v=video-v6-20261123",
+    "subtitles_url": "assets/video/livetsm-overview-v1.ru.srt?v=video-v6-20261123",
+    "poster_unchanged": true,
+    "transcript_unchanged": true
   },
   "release_history": [
     {
@@ -662,6 +675,89 @@
       "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup",
       "release_id": "3.7-icons-contacts-20261106",
       "public_file_count": 14
+    },
+    {
+      "date": "2026-11-06",
+      "basis": "approved 3.7 layout",
+      "new_boot_path_visualization": "rejected; original section retained",
+      "photos": [
+        {
+          "url": "https://igorsvetoch.github.io/livetsm-sales-kit/photos/LiveTSM_USB_from_TU.png",
+          "dimensions": [
+            622,
+            317
+          ],
+          "label": "USB Type-A"
+        },
+        {
+          "url": "https://igorsvetoch.github.io/livetsm-sales-kit/photos/LiveTSM_M2_USB_from_TU.png",
+          "dimensions": [
+            318,
+            269
+          ],
+          "label": "M.2 2230 A+E"
+        }
+      ],
+      "photo_pixels_unchanged": true,
+      "photo_aspect_ratio_preserved": true,
+      "different_scales_note": true,
+      "jacarta_xl_labels": false,
+      "excluded": [
+        "PDF manuals",
+        "certification decision file",
+        "internal documents",
+        "archives",
+        "screenshots",
+        "work scripts"
+      ],
+      "readme_scope": "public files only",
+      "asset_cache_version": "20261106-3",
+      "asset_cache_rule": "Version CSS/JS URLs when resources change to avoid stale styles with new markup",
+      "release_id": "3.7-icons-contacts-video-20261106",
+      "public_file_count": 17,
+      "video_files": [
+        "assets/video/livetsm-overview-v1.mp4",
+        "assets/video/livetsm-overview-v1.jpg",
+        "assets/video/livetsm-overview-v1.ru.srt"
+      ]
+    }
+  ],
+  "video_presentation_history": [
+    {
+      "id": "livetsm-overview-v1",
+      "title": "LiveTSM за 5 минут",
+      "anchor": "video",
+      "position": "after hero",
+      "owner_approved_on": "2026-11-06",
+      "publication_authorized": true,
+      "status": "prepared_for_publication",
+      "duration_seconds": 299.37,
+      "display_duration": "4:59",
+      "source": "approved full presentation v4",
+      "video": "assets/video/livetsm-overview-v1.mp4",
+      "poster": "assets/video/livetsm-overview-v1.jpg",
+      "subtitles_download": "assets/video/livetsm-overview-v1.ru.srt",
+      "burned_in_subtitles": true,
+      "native_controls": true,
+      "playsinline": true,
+      "preload": "none",
+      "autoplay": false,
+      "duplicate_caption_track": false,
+      "transcript": "native details with complete six-chapter written narration",
+      "sales_kit_url": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video",
+      "hero_link": "Смотреть видео · 5 минут",
+      "main_navigation_unchanged": true,
+      "responsive": "single 16:9 player, width 100%, no cropping; wrapped download links",
+      "synthetic_voice_disclosed": true,
+      "private_working_files_published": false,
+      "preserved": [
+        "existing page sections",
+        "certification wording",
+        "CLI/GUI independence",
+        "photos",
+        "existing scenario illustrations",
+        "no-pilot policy"
+      ]
     }
   ]
 }
